@@ -66,7 +66,7 @@ header {
 }
 
 .nav-item a {
-    color: #fff;
+    color: #3548c3;
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -81,14 +81,14 @@ header {
     left: 50%;
     width: 0;
     height: 2px;
-    background: #fff;
+    background: #3548c3;
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
 
 .nav-item a:hover {
     background: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    color: #3548c3;
     transform: translateY(-2px);
 }
 
@@ -103,7 +103,7 @@ body {
   min-height: 100vh; /*Ik heb min-height gezet omdat toen ik alleen height had gezet was helemaal onderin helder dus ik moest min-height zetten om het volledig temaken met die page dus de achtergrond meetrekken die shawdow bedoel ik */
   margin: 0;
   font-family: Arial, sans-serif;
-  color: #fff;
+  color: #3548c3;
 }
 
 .container{
@@ -117,7 +117,7 @@ body {
 }
 
 .intro h2{
-  color: #ffffff;
+  color: #3548c3fff;
   margin-bottom: 10px;
 }
 
@@ -159,7 +159,7 @@ body {
 }
 
 .info h3{
-  color: #ffffff;
+  color: #3548c3fff;
   margin: 0;
   font-size: 1.1em;
 }
@@ -171,7 +171,7 @@ body {
 
 .btn{
   background: #333;
-  color: #fff;
+  color: #3548c3;
   padding: 6px 12px;
   border-radius: 8px;
   text-decoration: none;
