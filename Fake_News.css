@@ -1,0 +1,206 @@
+/* ===== DARK + GLITCHY FAKE NEWS THEME ===== */
+
+body {
+  background: #000;
+  color: #f2f2f2;
+  position: relative;
+}
+
+/* ominous vignette with yellow/orange distortion (disinformation vibe) */
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(1200px 600px at 50% 6%, rgba(255,140,0,0.05), transparent 12%),
+    radial-gradient(800px 400px at 50% 90%, rgba(0,0,0,0.6), rgba(0,0,0,0.95));
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+
+/* Container with darker background and yellow accent */
+.container {
+    width: 85%;
+    max-width: 900px;
+    margin: 30px auto;
+    background: linear-gradient(180deg, rgba(20,12,0,0.96), rgba(10,6,0,0.95));
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,165,0,0.12);
+    box-shadow:
+      0 18px 60px rgba(0,0,0,0.8),
+      0 6px 30px rgba(255, 165, 0, 0.05);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Glitch effect for title */
+.glitch-title {
+  color: #ffa500;
+  font-size: 2.8rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 6px 24px rgba(255,165,0,0.06), 0 2px 6px rgba(0,0,0,0.85);
+  position: relative;
+  animation: glitchText 4s infinite;
+}
+
+@keyframes glitchText {
+  0%, 100% { text-shadow: 0 6px 24px rgba(255,165,0,0.06); }
+  20% { text-shadow: -2px 0 #ffa500, 2px 0 #ff6b00, 0 6px 24px rgba(255,165,0,0.1); }
+  40% { text-shadow: 0 6px 24px rgba(255,165,0,0.06); }
+}
+
+/* Intro section */
+.intro {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.intro h2 {
+    color: #ffa500;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 6px 24px rgba(255,165,0,0.06), 0 2px 6px rgba(0,0,0,0.85);
+}
+
+.intro p {
+    color: #e0e0e0;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Section headings with yellow/orange accent */
+.content-section h3 {
+    color: #ffa500;
+    font-size: 1.9rem;
+    border-left: 6px solid #ffa500;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(255,165,0,0.08);
+}
+
+/* Warning banner with glitch effect */
+.warning-banner {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #ffa500, #ff6b00);
+    color: #1b0b0b;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-weight: 800;
+    box-shadow: 0 8px 30px rgba(255,165,0,0.12);
+    animation: warnPulse 2.2s infinite;
+    position: relative;
+}
+
+.warning-banner.glitch {
+  position: relative;
+  animation: glitchBanner 3s infinite;
+}
+
+@keyframes glitchBanner {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-3px); }
+  40% { transform: translateX(3px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+}
+
+@keyframes warnPulse {
+  0%   { box-shadow: 0 8px 24px rgba(255,165,0,0.08); }
+  50%  { box-shadow: 0 18px 44px rgba(255,165,0,0.16); }
+  100% { box-shadow: 0 8px 24px rgba(255,165,0,0.08); }
+}
+
+/* Topic cards with yellow accent */
+.topic {
+    display: flex;
+    align-items: flex-start;
+    background: rgba(255, 165, 0, 0.02);
+    padding: 18px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    border-left: 6px solid rgba(255,165,0,0.95);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.topic:hover {
+    background: rgba(255, 165, 0, 0.06);
+    transform: translateX(8px) translateY(-2px);
+    box-shadow: 0 14px 40px rgba(255,165,0,0.06);
+}
+
+/* Icons */
+.icon {
+    color: #ffa500;
+    font-size: 1.9rem;
+    margin-right: 18px;
+    min-width: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    flex: 1;
+}
+
+.info h4 {
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.info p {
+    color: #d0d0d0;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Tip box — urgent style */
+.tip-box {
+    background: rgba(255, 165, 0, 0.08);
+    border: 2px solid #ffa500;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 8px 24px rgba(255,165,0,0.06);
+}
+
+.tip-box.urgent {
+    background: rgba(255, 100, 0, 0.1);
+    border-color: #ff6400;
+    animation: tipPulse 2s infinite;
+}
+
+@keyframes tipPulse {
+  0%, 100% { box-shadow: 0 8px 24px rgba(255,100,0,0.06); }
+  50% { box-shadow: 0 12px 36px rgba(255,100,0,0.12); }
+}
+
+.tip-box i {
+    color: #ffa500;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .container { margin: 18px auto; padding: 28px; }
+    .intro h2 { font-size: 1.9rem; }
+    .glitch-title { font-size: 1.7rem; letter-spacing: 1px; }
+    .content-section h3 { font-size: 1.5rem; border-left-width: 5px; }
+    .topic { flex-direction: column; gap: 10px; }
+}
+

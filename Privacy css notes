@@ -1,0 +1,253 @@
+.nav-logo { 
+    display: flex; 
+    align-items: center;
+    margin-left: 24px;
+}
+
+.nav-logo-image {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;    /* changed from 'cover' to 'contain' */
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    padding: 8px;  /* optional: adds some spacing around the logo */
+}
+
+/* ...rest of existing code... */
+
+/* Hover effect voor focus/interactie */
+.nav-logo-image:hover {
+    transform: scale(1.06);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* Responsief: kleiner op smalle schermen */
+@media (max-width: 768px) {
+    .nav-logo-image { width: 72px; height: 72px; }
+}
+
+@media (max-width: 480px) {
+    .nav-logo-image { width: 56px; height: 56px; }
+}
+/* ...existing code... */
+
+/* Navbar styling */
+header {
+    background: #ff2e2e;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;  /* Removes bullet points */
+    padding: 0;        /* Removes default padding */
+    margin: 0;         /* Removes default margin */
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item a {
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-item a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.nav-item a:hover::after {
+    width: 70%;
+}
+
+/* ...existing code... */
+
+body {
+  background: #000; /* pure black base */
+  color: #f2f2f2;
+  position: relative;
+}
+
+/* subtle dark vignette + faint red wash near top */
+body::before{
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(1200px 600px at 50% 6%, rgba(80,0,0,0.06), transparent 12%),
+    radial-gradient(800px 400px at 50% 90%, rgba(0,0,0,0.6), rgba(0,0,0,0.95));
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+
+/* make container darker and ominous */
+.container {
+    width: 85%;
+    max-width: 900px;
+    margin: 30px auto;
+    background: linear-gradient(180deg, rgba(12,6,6,0.96), rgba(6,2,2,0.95));
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,40,40,0.10);
+    box-shadow:
+      0 18px 60px rgba(0,0,0,0.8),
+      0 6px 30px rgba(255, 40, 40, 0.06);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* stronger headline */
+.intro h2 {
+    color: #ff2e2e;
+    font-size: 2.8rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 6px 24px rgba(255,46,46,0.06), 0 2px 6px rgba(0,0,0,0.85);
+}
+
+/* warning banner — bolder and pulsing */
+.warning-banner {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #ff2e2e, #ff7a5a);
+    color: #1b0b0b;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    font-weight: 800;
+    box-shadow: 0 8px 30px rgba(255,46,46,0.10);
+    animation: warnPulse 2.2s infinite;
+}
+.warning-banner.glitch {
+  position: relative;
+  animation: glitchBanner 3s infinite;
+}
+
+/* topic cards — darker and sharper red accent */
+.topic {
+    display: flex;
+    align-items: flex-start;
+    background: rgba(255, 40, 40, 0.02);
+    padding: 18px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    border-left: 6px solid rgba(255,40,40,0.98);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.topic:hover {
+    background: rgba(255, 40, 40, 0.06);
+    transform: translateX(8px) translateY(-2px);
+    box-shadow: 0 14px 40px rgba(255,40,40,0.06);
+}
+
+/* icon styling for emphasis */
+.icon {
+    color: #ff6b6b;
+    font-size: 1.9rem;
+    margin-right: 18px;
+    min-width: 36px;
+    display: flex;
+    align-items: center;
+}
+
+/* tip box — urgent but readable */
+.tip-box {
+    background: rgba(255, 40, 40, 0.06);
+    border: 1px solid rgba(255,80,80,0.14);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 8px 24px rgba(255,40,40,0.04);
+}
+@keyframes glitchBanner {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-3px); }
+  40% { transform: translateX(3px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+}
+
+@keyframes warnPulse {
+  0%   { box-shadow: 0 8px 24px rgba(255,165,0,0.08); }
+  50%  { box-shadow: 0 18px 44px rgba(255,165,0,0.16); }
+  100% { box-shadow: 0 8px 24px rgba(255,165,0,0.08); }
+}
+
+/* small animation for warning */
+@keyframes warnPulse {
+  0%   { box-shadow: 0 8px 24px rgba(255,46,46,0.06); transform: translateY(0); }
+  50%  { box-shadow: 0 18px 44px rgba(255,46,46,0.12); transform: translateY(-2px); }
+  100% { box-shadow: 0 8px 24px rgba(255,46,46,0.06); transform: translateY(0); }
+}
+
+/* responsive tweaks */
+@media (max-width: 768px) {
+    .container { margin: 18px auto; padding: 28px; }
+    .intro h2 { font-size: 1.9rem; }
+}
+
+/* ...existing code... */
+
+.glitch-title {
+  color: #ffa500;
+  font-size: 2.8rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 6px 24px rgba(255,165,0,0.06), 0 2px 6px rgba(0,0,0,0.85);
+  position: relative;
+  animation: glitchText 4s infinite;
+}
+
+@keyframes glitchText {
+  0%, 100% { text-shadow: 0 6px 24px rgba(255,165,0,0.06); }
+  20% { text-shadow: -2px 0 #ffa500, 2px 0 #ff6b00, 0 6px 24px rgba(255,165,0,0.1); }
+  40% { text-shadow: 0 6px 24px rgba(255,165,0,0.06); }
+}
+
+

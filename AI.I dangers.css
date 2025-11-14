@@ -1,0 +1,309 @@
+.nav-logo { 
+    display: flex; 
+    align-items: center;
+    margin-left: 24px;
+}
+
+.nav-logo-image {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;    /* changed from 'cover' to 'contain' */
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    padding: 8px;  /* optional: adds some spacing around the logo */
+}
+
+/* ...rest of existing code... */
+
+/* Hover effect voor focus/interactie */
+.nav-logo-image:hover {
+    transform: scale(1.06);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* Responsief: kleiner op smalle schermen */
+@media (max-width: 768px) {
+    .nav-logo-image { width: 72px; height: 72px; }
+}
+
+@media (max-width: 480px) {
+    .nav-logo-image { width: 56px; height: 56px; }
+}
+/* ...existing code... */
+
+/* Navbar styling */
+header {
+    background: rgba(39, 28, 28, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;  /* Removes bullet points */
+    padding: 0;        /* Removes default padding */
+    margin: 0;         /* Removes default margin */
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item a {
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-item a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.nav-item a:hover::after {
+    width: 70%;
+}
+.nav-logo { 
+  display: flex; 
+  align-items: center;
+  margin-left: 18px;
+
+}
+
+.nav-logo-image {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  filter: brightness(0.8) contrast(1.2);
+}
+
+/* Hover: eerie pulse and glow */
+.nav-logo-image:hover {
+  transform: scale(1.08) rotate(1deg);
+  box-shadow: 0 0 25px rgba(255, 0, 50, 0.6);
+  filter: brightness(1.1) contrast(1.4) saturate(1.2);
+}
+
+/* Responsive scaling */
+@media (max-width: 768px) {
+  .nav-logo-image { width: 72px; height: 72px; }
+}
+
+@media (max-width: 480px) {
+  .nav-logo-image { width: 56px; height: 56px; }
+}
+
+/* Ominous dark background */
+body {
+  background: radial-gradient(circle at top, #1a0000 0%, #050505 60%, #000 100%);
+  color: #f0f0f0;
+  font-family: "Cinzel", "Arial", sans-serif;
+  line-height: 1.7;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Dark, shadowy header */
+header {
+  background: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  padding: 80px 20px;
+  color: #fff;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  animation: flicker 3s infinite alternate ease-in-out;
+}
+
+/* Title — glowing red with slight pulse */
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  color: #ff1e1e;
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 35px rgba(255, 20, 20, 0.3);
+  text-transform: uppercase;
+  animation: pulseRed 2.5s infinite ease-in-out;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #cfcfcf;
+  text-align: center;
+}
+
+/* Main content container */
+.content {
+  max-width: 900px;
+  margin: 60px auto;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 45px;
+  border-radius: 15px;
+  box-shadow: 0 0 35px rgba(255, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Section blocks with sinister glow */
+.section {
+  background: rgba(10, 0, 0, 0.7);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.45);
+}
+
+/* Headings with eerie red line */
+h2 {
+  color: #ff5252;
+  border-left: 4px solid #ff0000;
+  padding-left: 10px;
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+/* Animations for mood */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseRed {
+  0%, 100% { text-shadow: 0 0 8px rgba(255, 0, 0, 0.4); }
+  50% { text-shadow: 0 0 18px rgba(255, 0, 0, 0.8); }
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.6; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.1rem;
+  }
+  .content {
+    padding: 25px;
+  }
+}
+/* Glitch title effect */
+.glitch {
+  position: relative;
+  font-family: "Share Tech Mono", monospace;
+  color: #ff1e1e;
+  text-transform: uppercase;
+  animation: glitch 2.5s infinite;
+}
+
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+}
+
+.glitch::before {
+  animation: glitchTop 2s infinite;
+  color: #ff4d4d;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.glitch::after {
+  animation: glitchBottom 2s infinite;
+  color: #7a0000;
+  clip: rect(0, 900px, 0, 0);
+}
+
+@keyframes glitch {
+  0%, 100% { transform: none; }
+  20% { transform: skew(0.5deg, 0.5deg); }
+  40% { transform: translate(-2px, 1px); }
+  60% { transform: translate(2px, -1px); }
+  80% { transform: skew(-0.5deg, -0.5deg); }
+}
+
+@keyframes glitchTop {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  5%, 15% { clip: rect(0, 9999px, 10px, 0); transform: translate(-2px, -2px); }
+  20%, 100% { clip: rect(0, 9999px, 0, 0); transform: none; }
+}
+
+@keyframes glitchBottom {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  5%, 15% { clip: rect(85px, 9999px, 100px, 0); transform: translate(2px, 2px); }
+  20%, 100% { clip: rect(0, 9999px, 0, 0); transform: none; }
+}
+
+/* Highlight + Danger spans */
+span.danger {
+  color: #ff1e1e;
+  font-weight: bold;
+  text-shadow: 0 0 6px rgba(255, 0, 0, 0.6);
+}
+
+span.highlight {
+  color: #ff8080;
+  font-style: italic;
+}
+
+/* Faint scanline overlay for horror vibe */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: repeating-linear-gradient(
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  animation: flickerScreen 8s infinite;
+}
+
+@keyframes flickerScreen {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.3; }
+}

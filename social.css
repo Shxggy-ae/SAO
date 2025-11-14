@@ -1,0 +1,146 @@
+body { background: linear-gradient(135deg, #3548c3, #020414); 
+    min-height: 100vh; 
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+    color: #fff; 
+}
+.damage-section {
+  text-align: center;
+  color: white;
+  background: transparent; /* laat de body gradient doorlopen */
+  padding: 60px 20px;
+}
+
+.damage-section h1 {
+  font-size: 3em;
+  color: #4db8ff;
+  margin-bottom: 20px;
+}
+
+.damage-section .intro {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.2em;
+  color: #cfdcff;
+}
+
+/* Grid layout */
+.damage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+.damage-card {
+  background-color: rgba(10, 20, 80, 0.8);
+  border: 2px solid #5b6cff;
+  border-radius: 15px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.damage-card:hover {
+  transform: translateY(-8px);
+  background-color: rgba(30, 50, 140, 0.9);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* Icon */
+.damage-card .icon {
+  background-color: #4b5dff;
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+.damage-card .icon i {
+  font-size: 32px;
+  color: #cde5ff;
+}
+
+/* Text */
+.damage-card h2 {
+  margin-bottom: 15px;
+  color: #e3edff;
+}
+
+.damage-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.damage-card ul li {
+  color: #d0dcff;
+  margin: 10px 0;
+  position: relative;
+  padding-left: 12px;
+}
+
+.damage-card ul li::before {
+  content: "•";
+  color: #7fbaff;
+  position: absolute;
+  left: 0;
+}
+
+.familiar-section {
+  text-align: center;
+  color: white;
+  background: transparent; /* laat je gradient doorlopen */
+  padding: 60px 20px;
+}
+
+.familiar-section h1 {
+  font-size: 3em;
+  color: #4b5dff;
+  margin-bottom: 40px;
+}
+
+.familiar-section h1 span {
+  color: #4b5dff;
+}
+
+/* Grid layout */
+.familiar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.familiar-card {
+  background-color: rgba(20, 40, 120, 0.75);
+  border: 2px solid #5b6cff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.familiar-card:hover {
+  transform: translateY(-6px);
+  background-color: rgba(40, 60, 150, 0.9);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
+  border-color: #031940;
+}
+
+/* Emoji + text */
+.familiar-card .emoji {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.familiar-card p {
+  font-size: 1.1em;
+  color: #d0dcff;
+  font-weight: 500;
+}
