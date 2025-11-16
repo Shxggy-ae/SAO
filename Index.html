@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+   <header>
         <nav class="navbar">
-            <a href="" class="nav-logo">
+            <a href="Index.html" class="nav-logo">
             <img src="Logo.png" alt="SAO Logo" class="nav-logo-image">
             </a>
 
@@ -37,75 +36,77 @@
             </ul>
         </nav>
     </header>
-    <body>
-    <div class="container">
-        <section class="intro">
-            <h2>Stay Aware Online</h2>
-            <p>
-            The digital world is a minefield of hidden threats. Your privacy is constantly under attack,
-             your attention is held hostage by addictive social media, and you're surrounded by cyberbullies,
-              manipulative fake news, and the unchecked dangers of AI. You are more vulnerable online than you think.
-              Click to see just how much is at risk before it's too late.
-            </p>
-        </section>
+     <div class="container">
 
-        <div class="topic">
-            <div class="icon">
-                <img src="Social Media Love GIF by Lumps.gif" alt="Social Media Addiction Gif">
-            </div>
-            <div class="info">
-                <h3>Social media addiction</h3>
-                <p>Scrolling too much can reduce your time, sleep, and focus</p>
-            </div>
-            <a href="#" class="btn">Click here</a>
-        </div>
+    <section class="intro">
+      <h2 class="decrypt">Stay Aware Online</h2>
+      <p class="decrypt">
+        The digital world is a minefield of hidden threats. Your privacy is constantly under attack,
+        your attention is held hostage by addictive social media, and you're surrounded by cyberbullies,
+        manipulative fake news, and the unchecked dangers of AI. You are more vulnerable online than you think.
+        Click to see just how much is at risk before it's too late.
+      </p>
+    </section>
 
-        <div class="topic">
-            <div class="icon">🔒</div>
-            <div class="info">
-                <h3>privacy issues</h3>
-                <p>Personal data can be stolen or misused</p>
-            </div>
-            <a href="#" class="btn">Click here</a>
-        </div>
-
-        <div class="topic">
-            <div class="icon">
-                <img src="hcyb.jpg" alt="">
-            </div>
-            <div class="info">
-                <h3>cyberbullying</h3>
-                <p>Online bullying can harm your self-confidence and mental health.</p>
-            </div>
-            <a href="#" class="btn">Click here</a>
-        </div>
-
-        <div class="topic">
-            <div class="icon">
-                <img src="gif.gif" alt="Fake News gif">
-            </div>
-            <div class="info">
-                <h3>Fake news </h3>
-                <p>Incorrect information can influence your choices and opinions.</p>
-            </div>
-            <a href="#" class="btn">Click here</a>
-        </div>
-
-        <div class="topic">
-            <div class="icon">
-                <img src="evil-ai-robot-with-warning-vectorart.png" alt="Ai robot picture">
-            </div>
-            <div class="info">
-                <h3>AI Dangers</h3>
-                <p>AI can create misleading content, such as deepfakes and fake news.</p>
-            </div>
-            <a href="#" class="btn">Click here</a>
-        </div>
+    <div class="topic">
+      <div class="icon">
+        <img src="Social Media Love GIF by Lumps.gif" alt="Social Media Addiction Gif">
+      </div>
+      <div class="info">
+        <h3 class="decrypt">Social media addiction</h3>
+        <p class="decrypt">Scrolling too much can reduce your time, sleep, and focus</p>
+      </div>
+      <a href="social.html" class="btn decrypt">Click here</a>
     </div>
-     <footer class="footer">
+
+    <div class="topic">
+      <div class="icon">
+        <img src="hcyb.jpg" alt="Cyberbullying">
+      </div>
+      <div class="info">
+        <h3 class="decrypt">Cyberbullying</h3>
+        <p class="decrypt">Online bullying can harm your self-confidence and mental health.</p>
+      </div>
+      <a href="#" class="btn decrypt">Click here</a>
+    </div>
+
+    <div class="topic">
+      <div class="icon">🔒</div>
+      <div class="info">
+        <h3 class="decrypt">Privacy issues</h3>
+        <p class="decrypt">Personal data can be stolen or misused</p>
+      </div>
+      <a href="Privacy_Issues.html" class="btn decrypt">Click here</a>
+    </div>
+
+    <div class="topic">
+      <div class="icon">
+        <img src="gif.gif" alt="Fake News gif">
+      </div>
+      <div class="info">
+        <h3 class="decrypt">Fake news</h3>
+        <p class="decrypt">Incorrect information can influence your choices and opinions.</p>
+      </div>
+      <a href="Fake_News.html" class="btn decrypt">Click here</a>
+    </div>
+
+    <div class="topic">
+      <div class="icon">
+        <img src="evil-ai-robot-with-warning-vectorart.png" alt="AI robot picture">
+      </div>
+      <div class="info">
+        <h3 class="decrypt">AI Dangers</h3>
+        <p class="decrypt">AI can create misleading content, such as deepfakes and fake news.</p>
+      </div>
+      <a href="A.I dangers.html" class="btn decrypt">Click here</a>
+    </div>
+  </div>
+    <script src="script.js"></script>
+ 
+    <footer class="footer">
   <div class="wave-container">
-    <svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#000b76" fill-opacity="1"> <!-- Alleen kleur aangepast -->
+    <svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="#000b76" fill-opacity="1">
         <animate attributeName="d" dur="3s" repeatCount="indefinite"
           values="
           M0,160L80,176C160,192,320,224,480,240C640,256,800,256,960,240C1120,224,1280,192,1440,160V320H0Z;
@@ -115,14 +116,11 @@
         </animate>
       </path>
     </svg>
-
     <div class="footer-content">
-      <p class="copyright">Stay Aware Online © 2025</p> <!-- Jouw tekst -->
-      <div class="messages-row">
-      <p class="message">Not everything you see online is fun or safe.Learn what can go wrong — so you can do it better.</p> <!-- Jouw tekst -->
-      <p class="message"></p> <!-- Jouw tekst -->
-    </div>
+      <p class="copyright">Stay Aware Online © 2025</p> 
   </div></div>
 </footer>
+
+
 </body>
 </html>
