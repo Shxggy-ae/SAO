@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -17,12 +18,10 @@ body {
     padding: 0 20px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
 * {
     font-family: 'Inter', sans-serif;
 }
-/* nav */
 .nav-logo { 
     display: flex; 
     align-items: center;
@@ -32,22 +31,17 @@ body {
 .nav-logo-image {
     width: 96px;
     height: 96px;
-    object-fit: contain;    /* changed from 'cover' to 'contain' */
+    object-fit: contain;   
     border-radius: 15px;
     display: block;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    padding: 8px;  /* optional: adds some spacing around the logo */
 }
 
-/* ...rest of existing code... */
-
-/* Hover effect voor focus/interactie */
 .nav-logo-image:hover {
     transform: scale(1.06);
     box-shadow: 0 6px 18px rgba(0,0,0,0.35);
 }
 
-/* Responsief: kleiner op smalle schermen */
 @media (max-width: 768px) {
     .nav-logo-image { width: 72px; height: 72px; }
 }
@@ -55,11 +49,9 @@ body {
 @media (max-width: 480px) {
     .nav-logo-image { width: 56px; height: 56px; }
 }
-/* ...existing code... */
 
-/* Navbar styling */
 header {
-    background: #ff2e2e;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
     position: sticky;
@@ -81,13 +73,17 @@ header {
     display: flex;
     gap: 2rem;
     align-items: center;
-    list-style: none;  /* Removes bullet points */
-    padding: 0;        /* Removes default padding */
-    margin: 0;         /* Removes default margin */
+    list-style: none; 
+    padding: 0;        
+    margin: 0;         
 }
 
 .nav-item {
     position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
 }
 
 .nav-item a {
@@ -121,7 +117,6 @@ header {
     width: 70%;
 } 
 
-/* Hero header section */
 header.hero-header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -203,7 +198,39 @@ header p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.value-card-2 {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    left: 200px;
+}
+
+.value-card-3 {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    left: 205px;
+}
+
 .value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.value-card-2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.value-card-3:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
@@ -214,6 +241,16 @@ header p {
 }
 
 .value-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #667eea;
+}
+.value-card-2 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #667eea;
+}
+.value-card-3 h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
     color: #667eea;

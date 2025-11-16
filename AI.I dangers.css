@@ -1,3 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+/* nav */
 .nav-logo { 
     display: flex; 
     align-items: center;
@@ -34,7 +62,7 @@
 
 /* Navbar styling */
 header {
-    background: rgba(39, 28, 28, 0.1);
+    background: linear-gradient(135deg, #3548c3, #020414);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
     position: sticky;
@@ -94,39 +122,7 @@ header {
 
 .nav-item a:hover::after {
     width: 70%;
-}
-.nav-logo { 
-  display: flex; 
-  align-items: center;
-  margin-left: 18px;
-
-}
-
-.nav-logo-image {
-  width: 96px;
-  height: 96px;
-  object-fit: contain;
-  border-radius: 12px;
-  display: block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-  filter: brightness(0.8) contrast(1.2);
-}
-
-/* Hover: eerie pulse and glow */
-.nav-logo-image:hover {
-  transform: scale(1.08) rotate(1deg);
-  box-shadow: 0 0 25px rgba(255, 0, 50, 0.6);
-  filter: brightness(1.1) contrast(1.4) saturate(1.2);
-}
-
-/* Responsive scaling */
-@media (max-width: 768px) {
-  .nav-logo-image { width: 72px; height: 72px; }
-}
-
-@media (max-width: 480px) {
-  .nav-logo-image { width: 56px; height: 56px; }
-}
+} 
 
 /* Ominous dark background */
 body {

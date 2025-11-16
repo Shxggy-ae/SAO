@@ -1,3 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+/* nav */
 .nav-logo { 
     display: flex; 
     align-items: center;
@@ -34,7 +62,7 @@
 
 /* Navbar styling */
 header {
-    background: rgba(39, 28, 28, 0.1);
+    background: linear-gradient(135deg, #3548c3, #020414);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
     position: sticky;
@@ -66,7 +94,7 @@ header {
 }
 
 .nav-item a {
-    color: #3548c3;
+    color: #fff;
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -81,20 +109,20 @@ header {
     left: 50%;
     width: 0;
     height: 2px;
-    background: #3548c3;
+    background: #fff;
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
 
 .nav-item a:hover {
     background: rgba(255, 255, 255, 0.1);
-    color: #3548c3;
+    color: #fff;
     transform: translateY(-2px);
 }
 
 .nav-item a:hover::after {
     width: 70%;
-}
+} 
 
 
 
@@ -117,7 +145,7 @@ body {
 }
 
 .intro h2{
-  color: #3548c3fff;
+  color: #3548c3ff;
   margin-bottom: 10px;
 }
 
@@ -159,7 +187,7 @@ body {
 }
 
 .info h3{
-  color: #3548c3fff;
+  color: #3548c3ff;
   margin: 0;
   font-size: 1.1em;
 }
