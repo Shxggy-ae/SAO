@@ -35,6 +35,7 @@ body {
     border-radius: 15px;
     display: block;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    padding: 8px;
 }
 
 .nav-logo-image:hover {
