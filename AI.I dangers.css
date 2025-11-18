@@ -326,7 +326,7 @@ span.highlight {
 .footer-content {
   position: absolute;
   bottom: 10px;
-  right: 65%;
+  left: 5%;
   transform: none;
   z-index: 5;
   text-align: left;
@@ -340,4 +340,16 @@ span.highlight {
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 15px;
+}
+
+.message {
+  flex: 1;
+  min-width: 0;
+  /* white-space: nowrap; weghalen, want we willen dat de tekst wrap binnen zijn container */
+  overflow: hidden;
+}
+
+.message-container{
+  display: flex;
+  gap: 30px;
 }
