@@ -1,129 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-
-* {
-    font-family: 'Inter', sans-serif;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: #f8f9fa;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-* {
-    font-family: 'Inter', sans-serif;
-}
-/* nav */
-.nav-logo { 
-    display: flex; 
-    align-items: center;
-    margin-left: 24px;
-}
-
-.nav-logo-image {
-    width: 96px;
-    height: 96px;
-    object-fit: contain;    /* changed from 'cover' to 'contain' */
-    border-radius: 15px;
-    display: block;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    padding: 8px;  /* optional: adds some spacing around the logo */
-}
-
-/* ...rest of existing code... */
-
-/* Hover effect voor focus/interactie */
-.nav-logo-image:hover {
-    transform: scale(1.06);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-}
-
-/* Responsief: kleiner op smalle schermen */
-@media (max-width: 768px) {
-    .nav-logo-image { width: 72px; height: 72px; }
-}
-
-@media (max-width: 480px) {
-    .nav-logo-image { width: 56px; height: 56px; }
-}
-/* ...existing code... */
-
-/* Navbar styling */
-header {
-    background: linear-gradient(135deg, #3548c3, #020414);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    padding: 0;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.nav-menu {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    list-style: none;  /* Removes bullet points */
-    padding: 0;        /* Removes default padding */
-    margin: 0;         /* Removes default margin */
-}
-
-.nav-item {
-    position: relative;
-}
-
-.nav-item a {
-    color: #fff;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.nav-item a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: #fff;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.nav-item a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    transform: translateY(-2px);
-}
-
-.nav-item a:hover::after {
-    width: 70%;
-} 
-body { background: linear-gradient(135deg, #3548c3, #020414); 
+body { background: linear-gradient(135deg, #0b1558, #01020a); 
     min-height: 100vh; 
     margin: 0; 
     font-family: Arial, sans-serif; 
@@ -157,6 +32,7 @@ body { background: linear-gradient(135deg, #3548c3, #020414);
   justify-content: center;
 }
 
+/* Card style */
 .damage-card {
   background-color: rgba(10, 20, 80, 0.8);
   border: 2px solid #5b6cff;
@@ -215,6 +91,7 @@ body { background: linear-gradient(135deg, #3548c3, #020414);
   left: 0;
 }
 
+/* Familiar Section */
 .familiar-section {
   text-align: center;
   color: white;
@@ -241,6 +118,7 @@ body { background: linear-gradient(135deg, #3548c3, #020414);
   align-items: stretch;
 }
 
+/* Card design */
 .familiar-card {
   background-color: rgba(20, 40, 120, 0.75);
   border: 2px solid #5b6cff;
@@ -268,6 +146,14 @@ body { background: linear-gradient(135deg, #3548c3, #020414);
   font-size: 1.1em;
   color: #d0dcff;
   font-weight: 500;
+}
+
+.icon-img {
+  width: 100px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
 }
 
 .wave-container {
@@ -308,4 +194,16 @@ body { background: linear-gradient(135deg, #3548c3, #020414);
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 15px;
+}
+
+.message {
+  flex: 1;
+  min-width: 0;
+  /* white-space: nowrap; weghalen, want we willen dat de tekst wrap binnen zijn container */
+  overflow: hidden;
+}
+
+.message-container{
+  display: flex;
+  gap: 30px;
 }
