@@ -123,6 +123,7 @@ header {
 .nav-item a:hover::after {
     width: 70%;
 } 
+
 body {
   background: linear-gradient(135deg, #3548c3, #020414);
   min-height: 100vh; /*Ik heb min-height gezet omdat toen ik alleen height had gezet was helemaal onderin helder dus ik moest min-height zetten om het volledig temaken met die page dus de achtergrond meetrekken die shawdow bedoel ik */
