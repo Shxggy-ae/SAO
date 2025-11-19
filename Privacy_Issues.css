@@ -22,9 +22,6 @@ body {
     padding: 0 20px;
 }
 
-* {
-    font-family: 'Inter', sans-serif;
-}
 .nav-logo { 
     display: flex; 
     align-items: center;
@@ -40,7 +37,6 @@ body {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     padding: 8px;  
 }
-
 
 .nav-logo-image:hover {
     transform: scale(1.06);
